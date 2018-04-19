@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="botton_main">
+        <item name="android:width">25dp</item>
+        <item name="android:height">25dp</item>
+    </style>
+
+
 </resources>

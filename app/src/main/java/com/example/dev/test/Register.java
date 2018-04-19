@@ -1,5 +1,6 @@
 package com.example.dev.test;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -38,6 +39,7 @@ public class Register extends AppCompatActivity {
 
     private static final int SELECT_PHOTO = 100;
     private Bitmap yourSelectedImage;
+    private Context context;
 
 
     @Override
@@ -45,6 +47,26 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         ButterKnife.bind(this);
+
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(phoneNumber.getText().toString().isEmpty() || phoneNumber.getText().toString().length() != 11 || !phoneNumber.getText().toString().startsWith("09")){
+                    Toast.makeText(Register.this, context.getString(R.string.wrong_phone_number), Toast.LENGTH_SHORT);
+                }
+                if (userName.getText().toString().isEmpty() || userName.getText().toString().length() < 7 ){
+                    Toast.makeText(Register.this, context.getString(R.string.wrong_user_name), Toast.LENGTH_SHORT);
+                }
+                if (password.getText().toString().isEmpty() || password.getText().toString().length() < 7 ){
+                    Toast.makeText(Register.this, context.getString(R.string.wrong_password), Toast.LENGTH_SHORT);
+                }
+                if (passwordAgain.getText().toString().isEmpty() || !(password.getText().toString().equals(passwordAgain))){
+                    Toast.makeText(Register.this, context.getString(R.string.wrong_re_password), Toast.LENGTH_SHORT);
+                }
+            }
+        });
+
+
 
         photo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +85,7 @@ public class Register extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-
+        super.onActivityResult(requestCode, resultCode, data);
 
         switch (resultCode){
             case SELECT_PHOTO:
@@ -76,7 +98,7 @@ public class Register extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Error Get File", Toast.LENGTH_SHORT).show();
                     }
                     yourSelectedImage = BitmapFactory.decodeStream(imageStream);
-                    
+
                     photo.setImageBitmap(yourSelectedImage);
 
                 }

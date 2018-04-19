@@ -10,9 +10,15 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
+    <string name="forgotpassword">کد چهار رقمی پس از وارد کردن شماره تلفن همراه و تایید به شماره شما ارسال میگردد</string>
+
+
+=======
     <!--LoginActivity-->
     <string name="wrong_phone_number">شماره خود را صحیح وارد نمایید</string>
     <string name="wrong_user_name">نام کاربری خود را صحیح وارد نمایید</string>
     <string name="wrong_password">پسوورد خود راصحیح وارد نماید</string>
     <string name="wrong_re_password">پسوورد با تکرار پسوورد با هم یکی نیستند</string>
+
 </resources>

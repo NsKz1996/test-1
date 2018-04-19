@@ -36,6 +36,7 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -45,6 +46,7 @@ public class Login extends AppCompatActivity {
 
                 Intent intent = new Intent(Login.this, Register.class);
                 startActivity(intent);
+                
 
 
             }
@@ -58,9 +60,26 @@ public class Login extends AppCompatActivity {
 
                 Intent intent = new Intent(Login.this, MainActivity.class);
                 startActivity(intent);
+                finish();
 
 
             }
         });
+
+
+
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Login.this, forgotActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+
     }
 }

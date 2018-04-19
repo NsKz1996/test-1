@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">test</string>
+    <string name="app_name">ghoozh</string>
+    <string name="phone_number">شماره ی خود را وارد کنید</string>
+    <string name="user_name">نام کاربری خود را انتخاب کنید</string>
+    <string name="repasword">کلمه ی عبور خود را مجددا وارد کنید</string>
+    <string name="pasword">کلمه ی عبور خود را وارد کنید</string>
+    <string name="Register">ثبت نام</string>
+    <string name="ghavanin">مشاهده قوانین</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

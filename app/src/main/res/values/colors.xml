@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimaryDark">#016057</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="ui">#029688</color>
+    <color name="bottom_white">#ffffff</color>
+    <color name="marzbandi">#B42525</color>
+    <color name="activitiup">#07635a</color>
 </resources>

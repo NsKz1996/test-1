@@ -26,7 +26,7 @@ public class DataBase_User {
 
         SQLiteDatabase dbb = myhelper.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(myDbHelper.UID, model.ID);
+      //  contentValues.put(myDbHelper.UID, model.ID);
         contentValues.put(myDbHelper.PhoneNumber, model.getPhoneNumber());
         contentValues.put(myDbHelper.PassWord, model.getPassword());
         contentValues.put(myDbHelper.Username, model.getUserName());

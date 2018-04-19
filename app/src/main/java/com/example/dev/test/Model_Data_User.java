@@ -2,25 +2,25 @@ package com.example.dev.test;
 
 public class Model_Data_User {
 
-    int ID;
+  //  int ID;
     String PhoneNumber,UserName,Password;
     byte [] Profile;
 
-    public Model_Data_User(int id, String phoneNumber, String userName, String password, byte[] profile) {
-        ID=id;
+    public Model_Data_User( String phoneNumber, String userName, String password, byte[] profile) {
+      //  ID=id;
         PhoneNumber = phoneNumber;
         UserName = userName;
         Password = password;
         Profile = profile;
     }
 
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(int ID) {
-        this.ID = ID;
-    }
+//    public int getID() {
+//        return ID;
+//    }
+//
+//    public void setID(int ID) {
+//        this.ID = ID;
+//    }
 
     public String getPhoneNumber() {
         return PhoneNumber;

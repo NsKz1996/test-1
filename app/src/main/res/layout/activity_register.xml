@@ -106,7 +106,7 @@
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/bottom_white"
-                android:gravity="right"
+                android:gravity="left"
                 android:hint="@string/pasword"
                 android:inputType="textPassword"
                 android:textColor="@color/bottom_white"

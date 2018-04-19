@@ -48,7 +48,8 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/shap_addpost"
                 android:paddingRight="10dp"
-                android:text="موضوع"
+                android:hint="موضوع"
+                android:textColorHint="@color/bottom_white"
                 android:textColor="@color/bottom_white"
                 android:textStyle="bold"
                 android:id="@+id/addpost_edittext_mozoo"/>
@@ -67,7 +68,9 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/shap_addpost"
                 android:paddingRight="10dp"
-                android:text="توضیحات"
+                android:gravity="right"
+                android:hint="توضیحات"
+                android:textColorHint="@color/bottom_white"
                 android:textColor="@color/bottom_white"
                 android:textSize="15sp"
                 android:textStyle="bold"
@@ -94,7 +97,8 @@
                     android:layout_marginRight="20dp"
                     android:background="@drawable/shap_addpost"
                     android:paddingRight="10dp"
-                    android:text="مکان"
+                    android:hint="مکان"
+                    android:textColorHint="@color/bottom_white"
                     android:textColor="@color/bottom_white"
                     android:textStyle="bold"
                     android:id="@+id/addpost_edittext_location"/>
@@ -214,6 +218,10 @@
                 </RelativeLayout>
             </LinearLayout>
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bottom_white"></RelativeLayout>
         </LinearLayout>
     </LinearLayout>
 

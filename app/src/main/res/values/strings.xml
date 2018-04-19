@@ -10,7 +10,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<<<<<<< HEAD
 
     <string name="forgotpassword">کد چهار رقمی پس از وارد کردن شماره تلفن همراه و تایید به شماره شما ارسال میگردد</string>
 
@@ -21,5 +20,5 @@
     <string name="wrong_user_name">نام کاربری خود را صحیح وارد نمایید</string>
     <string name="wrong_password">پسوورد خود راصحیح وارد نماید</string>
     <string name="wrong_re_password">پسوورد با تکرار پسوورد با هم یکی نیستند</string>
->>>>>>> a04c636f02809da3bcf52614c44c44c9752e9f2f
+
 </resources>

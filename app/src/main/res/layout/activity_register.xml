@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/ui"
     android:orientation="vertical"
-    tools:context=".ghoozh_signup">
+    tools:context=".Register">
 
     <RelativeLayout
         android:layout_width="match_parent"

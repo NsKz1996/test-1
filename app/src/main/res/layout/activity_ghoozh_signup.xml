@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ui"
-    android:orientation="vertical"
-    tools:context=".ghoozh_signup">
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp">
 
         <Button
+            android:id="@+id/signup_botton_back"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:id="@+id/signup_botton_back"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/padding_left"
@@ -38,12 +36,12 @@
             app:civ_border_width="2dp" />
 
         <Button
+            android:id="@+id/asignup_botton_addimage"
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:layout_below="@id/circleimage_register"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="-15dp"
-            android:id="@+id/asignup_botton_addimage"
             android:background="@drawable/plus" />
     </RelativeLayout>
 
@@ -113,6 +111,9 @@
                 android:id="@+id/signup_edittext_password"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
                 android:backgroundTint="@color/bottom_white"
                 android:gravity="right"
                 android:hint="@string/pasword"

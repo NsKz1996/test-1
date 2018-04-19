@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
                 Intent intent = new Intent(Login.this, Register.class);
                 startActivity(intent);
 
-                //hessam
+
 
             }
         });

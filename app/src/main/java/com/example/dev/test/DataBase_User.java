@@ -9,6 +9,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class DataBase_User {
@@ -35,20 +36,24 @@ public class DataBase_User {
         return id;
     }
 
-    public String getData()
+    public ArrayList<Model_Data_User> getData()
     {
+        ArrayList<Model_Data_User> model_data_users = null;
+
         SQLiteDatabase db = myhelper.getWritableDatabase();
-        String[] columns = {myDbHelper.UID, myDbHelper.PhoneNumber, myDbHelper.PassWord};
+        String[] columns = {myDbHelper.UID, myDbHelper.PhoneNumber, myDbHelper.PassWord, myDbHelper.Photo};
         Cursor cursor =db.query(myDbHelper.TABLE_NAME,columns,null,null,null,null,null);
-        StringBuffer buffer= new StringBuffer();
         while (cursor.moveToNext())
         {
             int cid =cursor.getInt(cursor.getColumnIndex(myDbHelper.UID));
-            String name =cursor.getString(cursor.getColumnIndex(myDbHelper.PhoneNumber));
+            String phoneNumber =cursor.getString(cursor.getColumnIndex(myDbHelper.PhoneNumber));
+            String userName = cursor.getString(cursor.getColumnIndex(myDbHelper.Username));
             String password =cursor.getString(cursor.getColumnIndex(myDbHelper.PassWord));
-            buffer.append(cid+ "   " + name + "   " + password +" \n");
+            byte[] photo = cursor.getBlob(cursor.getColumnIndex(myDbHelper.Photo));
+
+            model_data_users.add(new Model_Data_User(phoneNumber, userName, password, photo));
         }
-        return buffer.toString();
+        return model_data_users;
     }
 
     public  int delete(String uname)

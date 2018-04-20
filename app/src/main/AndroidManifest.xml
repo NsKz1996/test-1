@@ -20,19 +20,11 @@
         <activity android:name=".forgotActivity" />
         <activity
             android:name=".MainActivity2"
-<<<<<<< HEAD
             android:label="@string/title_activity_main2"/>
         <activity android:name=".video_editor"/>
-
-            android:label="@string/title_activity_main2" />
         <activity android:name=".MainActivity"/>
-=======
-            android:label="@string/title_activity_main2" />
-        <activity android:name=".video_editor" />
-        android:label="@string/title_activity_main2" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".addpostActivity"></activity>
->>>>>>> d2008a053410028e109b89b58d5f6c1738f646e0
+
     </application>
 
 </manifest>

@@ -11,10 +11,10 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Fragment_main_addpost extends Fragment {
+public class Fragment_main_search extends Fragment {
 
-    public static Fragment_main_addpost newInstance() {
-        return new Fragment_main_addpost();
+    public static Fragment_main_search newInstance() {
+        return new Fragment_main_search();
     }
 
 
@@ -22,7 +22,7 @@ public class Fragment_main_addpost extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_add_post, container, false);
+        return inflater.inflate(R.layout.fragment_search, container, false);
     }
 
 }

@@ -33,11 +33,10 @@ public class Login extends AppCompatActivity {
         getintent();
 
 
-
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                 startActivity(intent);
                 finish();
             }
@@ -51,9 +50,11 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
 
 
-
             }
         });
+
+
+
 
 
 
@@ -71,15 +72,14 @@ public class Login extends AppCompatActivity {
         });
 
 
-
     }
 
 
-    private void getintent(){
+    private void getintent() {
         Intent Reg = getIntent();
-        Bundle User =Reg.getExtras();
+        Bundle User = Reg.getExtras();
 
-        if (User!=null){
+        if (User != null) {
             userName.setText(User.getString("UserName"));
             password.setText(User.getString("Password"));
         }

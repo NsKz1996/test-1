@@ -22,7 +22,7 @@ public class FragmentAdapter extends FragmentStatePagerAdapter {
                 returnFragment = Fragment_main_home.newInstance();
                 break;
             case 1:
-                returnFragment = Fragment_main_addpost.newInstance();
+                returnFragment = Fragment_main_search.newInstance();
                 break;
             case 2:
                 returnFragment = Fragment_main_notificatiin.newInstance();

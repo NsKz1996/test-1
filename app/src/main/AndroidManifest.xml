@@ -11,17 +11,26 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Login">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".forgotActivity" />
         <activity
             android:name=".MainActivity2"
+<<<<<<< HEAD
             />
+=======
+<<<<<<< HEAD
+            android:label="@string/title_activity_main2"></activity>
+        <activity android:name=".video_editor"></activity>
+=======
+            android:label="@string/title_activity_main2" />
+>>>>>>> 494522350bba22448bb05609398cc7db9ad86246
         <activity android:name=".MainActivity"></activity>
+>>>>>>> 15dbafd0d3acf59894c1398b2bd75d2f8b87e0f3
     </application>
 
 </manifest>

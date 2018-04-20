@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
+import android.view.inputmethod.InputMethodManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ import java.util.List;
  */
 public class Fragment_main_home extends Fragment {
 
-    public static Fragment_main_home newInstance(){
+    public static Fragment_main_home newInstance() {
         return new Fragment_main_home();
     }
 
@@ -62,6 +63,7 @@ public class Fragment_main_home extends Fragment {
         model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
 
     }
+
     private void runAnimation(RecyclerView recyclerView, int type) {
         Context context = recyclerView.getContext();
         LayoutAnimationController controller = null;
@@ -70,7 +72,7 @@ public class Fragment_main_home extends Fragment {
             controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_fall_down);
         } else if (type == 1) {
             controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_slide_from_button);
-        } else if (type == 2 ){
+        } else if (type == 2) {
             controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_slide_from_right);
         }
         RecyclerViewHomeAdapter adapter = new RecyclerViewHomeAdapter(model_post_homes);

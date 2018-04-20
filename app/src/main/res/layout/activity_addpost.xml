@@ -13,7 +13,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp">
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:id="@+id/fragmentaddpost_Imageview_addpost"
@@ -31,7 +31,7 @@
             android:id="@+id/fragmentaddpost_EditText_title"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:layout_below="@+id/fragmentaddpost_button_addpost"
+            android:layout_below="@+id/fragmentaddpost_EditText_title"
             android:layout_margin="10dp"
             android:background="@drawable/shap_addpost"
             android:backgroundTint="@color/ui"

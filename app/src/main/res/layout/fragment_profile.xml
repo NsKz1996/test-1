@@ -19,6 +19,7 @@
 
 
         <TextView
+            android:id="@+id/FragmentProfile_TextView_UserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
@@ -39,7 +40,7 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/profile_img2"
+            android:id="@+id/FragmentProfile_CircularImageView_Photo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_alignParentTop="true"

@@ -22,6 +22,7 @@ public class RecyclerViewNotificationAdapter extends RecyclerView.Adapter<Recycl
         this.model_notificationList = model_notificationList;
     }
 
+
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

@@ -18,14 +18,13 @@
         </activity>
         <activity android:name=".Register" />
         <activity android:name=".forgotActivity" />
-        <activity android:name=".MainActivity2"
-            android:label="@string/title_activity_main2"/>
+        <activity
+            android:name=".MainActivity2"
+            android:label="@string/title_activity_main2" />
+        <activity android:name=".video_editor" />
+        android:label="@string/title_activity_main2" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".addpostActivity"></activity>
+    </application>
 
-        <activity android:name=".video_editor"></activity>
-
-    android:label="@string/title_activity_main2" />
-
-    <activity android:name=".MainActivity"></activity>
-
-</application>
-    </manifest>
+</manifest>

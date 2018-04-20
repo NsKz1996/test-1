@@ -10,8 +10,9 @@
         android:id="@+id/framelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/navigationbottom"></FrameLayout>
+        android:layout_above="@+id/navigationbottom">
 
+    </FrameLayout>
     <LinearLayout
         android:id="@+id/navigationbottom"
         android:layout_width="match_parent"

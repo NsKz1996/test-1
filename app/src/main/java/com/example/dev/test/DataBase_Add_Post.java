@@ -10,11 +10,11 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 
-public class DataBase_Addpost {
-    myDbHelper helperaddpost;
+public class DataBase_Add_Post {
+    private myDbHelper helperaddpost;
     ArrayList<Model_post_hom_hesam> list =new ArrayList<>();
 
-    public DataBase_Addpost(Context context)
+    public DataBase_Add_Post(Context context)
     {
         helperaddpost = new myDbHelper(context);
     }
@@ -26,30 +26,30 @@ public class DataBase_Addpost {
         SQLiteDatabase dbb = helperaddpost.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
       //  contentValues.put(myDbHelper.UID, model.ID);
-        contentValues.put(myDbHelper.P, model.getPhoneNumber());
-        contentValues.put(myDbHelper.PassWord, model.getPassword());
-        contentValues.put(myDbHelper.Username, model.getUserName());
-        contentValues.put(myDbHelper.Photo, model.getProfile());
+        contentValues.put(myDbHelper.Photo, model.getImage());
+        contentValues.put(myDbHelper.Discription,model.getDes());
         long id = dbb.insert(myDbHelper.TABLE_NAME, null , contentValues);
         return id;
     }
 
-    public ArrayList<Model_Post_Home> getData()
+    public ArrayList<Model_post_hom_hesam> getData()
     {
-        ArrayList<Model_Post_Home> model_Post = null;
+        ArrayList<Model_post_hom_hesam> model_Post ;
+        model_Post=new ArrayList<>();
 
         SQLiteDatabase db = helperaddpost.getWritableDatabase();
         String[] columns = {myDbHelper.UID, myDbHelper.Discription, myDbHelper.Tozihat, myDbHelper.Photo};
         Cursor cursor =db.query(myDbHelper.TABLE_NAME,columns,null,null,null,null,null);
         while (cursor.moveToNext())
         {
+
             int cid =cursor.getInt(cursor.getColumnIndex(myDbHelper.UID));
             String Dis =cursor.getString(cursor.getColumnIndex(myDbHelper.Discription));
             String Tozih = cursor.getString(cursor.getColumnIndex(myDbHelper.Tozihat));
 
             byte[] photo = cursor.getBlob(cursor.getColumnIndex(myDbHelper.Photo));
 
-            model_Post.add(new Model_Data_User(phoneNumber, userName, password, photo));
+            model_Post.add(new Model_post_hom_hesam(photo,Dis));
         }
         return model_Post;
     }

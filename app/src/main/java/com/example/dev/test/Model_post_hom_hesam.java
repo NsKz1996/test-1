@@ -3,7 +3,8 @@ package com.example.dev.test;
 public class Model_post_hom_hesam {
 
     byte [] image;
-    String des,tozih;
+    private String des,tozih;
+
 
     public Model_post_hom_hesam(byte[] image, String des, String tozih) {
         this.image = image;
@@ -34,4 +35,12 @@ public class Model_post_hom_hesam {
     public void setTozih(String tozih) {
         this.tozih = tozih;
     }
+
+    public Model_post_hom_hesam(byte[] image, String des) {
+        this.image = image;
+        this.des = des;
+    }
 }
+
+
+

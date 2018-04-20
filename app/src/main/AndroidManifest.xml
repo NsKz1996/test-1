@@ -20,17 +20,11 @@
         <activity android:name=".forgotActivity" />
         <activity
             android:name=".MainActivity2"
-<<<<<<< HEAD
-            />
-=======
-<<<<<<< HEAD
-            android:label="@string/title_activity_main2"></activity>
-        <activity android:name=".video_editor"></activity>
-=======
+            android:label="@string/title_activity_main2"/>
+        <activity android:name=".video_editor"/>
+
             android:label="@string/title_activity_main2" />
->>>>>>> 494522350bba22448bb05609398cc7db9ad86246
-        <activity android:name=".MainActivity"></activity>
->>>>>>> 15dbafd0d3acf59894c1398b2bd75d2f8b87e0f3
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>

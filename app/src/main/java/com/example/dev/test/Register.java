@@ -91,6 +91,7 @@ public class Register extends AppCompatActivity {
                     }else {
                         Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(Register.this,Login.class);
+                      //  intent.p
                         startActivity(intent);
                         finish();
                     }

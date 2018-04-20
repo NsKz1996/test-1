@@ -19,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -42,7 +43,6 @@ public class Register extends AppCompatActivity {
     TextView rules;
 
 
-
     private static final int SELECT_PHOTO = 1;
     private Bitmap yourSelectedImage;
     private Context context;
@@ -60,39 +60,38 @@ public class Register extends AppCompatActivity {
 
         context = getApplicationContext();
 
-        db=new DataBase_User(this);
-
+        db = new DataBase_User(this);
 
 
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.i("Register Activity", "Intent");
-                if(phoneNumber.getText().toString().isEmpty() || phoneNumber.getText().toString().length() != 11 || !(phoneNumber.getText().toString().startsWith("09"))){
+                if (phoneNumber.getText().toString().isEmpty() || phoneNumber.getText().toString().length() != 11 || !(phoneNumber.getText().toString().startsWith("09"))) {
                     Toast.makeText(Register.this, context.getString(R.string.wrong_phone_number), Toast.LENGTH_SHORT).show();
-                }else if (userName.getText().toString().isEmpty() || userName.getText().toString().length() < 7 ){
+                } else if (userName.getText().toString().isEmpty() || userName.getText().toString().length() < 7) {
                     Toast.makeText(Register.this, context.getString(R.string.wrong_user_name), Toast.LENGTH_SHORT).show();
-                }else if (password.getText().toString().isEmpty() || password.getText().toString().length() < 7 ){
+                } else if (password.getText().toString().isEmpty() || password.getText().toString().length() < 7) {
                     Toast.makeText(Register.this, context.getString(R.string.wrong_password), Toast.LENGTH_SHORT).show();
-                }else if (passwordAgain.getText().toString().isEmpty() || !(password.getText().toString().equals(passwordAgain.getText().toString()))){
+                } else if (passwordAgain.getText().toString().isEmpty() || !(password.getText().toString().equals(passwordAgain.getText().toString()))) {
                     Toast.makeText(Register.this, context.getString(R.string.wrong_re_password), Toast.LENGTH_SHORT).show();
-                }else {
-                    Bitmap bitmap =((BitmapDrawable)photo.getDrawable()).getBitmap();
-                    ByteArrayOutputStream stream= new ByteArrayOutputStream();
-                    bitmap.compress(Bitmap.CompressFormat.PNG,0,stream);
-                    byte [] image = stream.toByteArray();
+                } else {
+                    Bitmap bitmap = ((BitmapDrawable) photo.getDrawable()).getBitmap();
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream);
+                    byte[] image = stream.toByteArray();
 
-                    Long ID=  db.insertData(new Model_Data_User(phoneNumber.getText().toString(),
+                    Long ID = db.insertData(new Model_Data_User(phoneNumber.getText().toString(),
                             userName.getText().toString(),
                             passwordAgain.getText().toString(),
                             image));
-                    if (ID<=0){
+                    if (ID <= 0) {
                         Toast.makeText(context, "Erore", Toast.LENGTH_SHORT).show();
-                    }else {
+                    } else {
                         Toast.makeText(context, "Saved", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(Register.this,Login.class);
-                        intent.putExtra("UserName",userName.getText().toString());
-                        intent.putExtra("Password",passwordAgain.getText().toString());
+                        Intent intent = new Intent(Register.this, Login.class);
+                        intent.putExtra("UserName", userName.getText().toString());
+                        intent.putExtra("Password", passwordAgain.getText().toString());
                         startActivity(intent);
                         finish();
                     }
@@ -104,16 +103,15 @@ public class Register extends AppCompatActivity {
         });
 
 
-
         photo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                try{
+                try {
                     Intent intent = new Intent(Intent.ACTION_PICK,
                             MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                   // intent.setType("image/*");
+                    // intent.setType("image/*");
                     startActivityForResult(intent, 2);
-                }catch (Exception x){
+                } catch (Exception x) {
                     Toast.makeText(getApplicationContext(), "Error Choose Image", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -125,25 +123,22 @@ public class Register extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 2 && resultCode==RESULT_OK && null!=data){
+        if (requestCode == 2 && resultCode == RESULT_OK && null != data) {
 
-            uri=data.getData();
+            uri = data.getData();
             CropImage();
 
-        }else if (requestCode == 1){
-            if (data != null){
-                Bundle bundle =data.getExtras();
-              Bitmap  bitmap= bundle.getParcelable("data");
+        } else if (requestCode == 1) {
+            if (data != null) {
+                Bundle bundle = data.getExtras();
+                Bitmap bitmap = bundle.getParcelable("data");
                 photo.setImageBitmap(bitmap);
 
 
             }
         }
 
-        }
-
-
-
+    }
 
 
 //        try {
@@ -188,24 +183,22 @@ public class Register extends AppCompatActivity {
 
     private void CropImage() {
 
-        try{
+        try {
             Intent CropIntent = new Intent("com.android.camera.action.CROP");
-            CropIntent.setDataAndType(uri,"image/*");
+            CropIntent.setDataAndType(uri, "image/*");
 
-            CropIntent.putExtra("crop","true");
-            CropIntent.putExtra("outputX",500);
-            CropIntent.putExtra("outputY",500);
-            CropIntent.putExtra("aspectX",1);
-            CropIntent.putExtra("aspectY",1);
-            CropIntent.putExtra("scaleUpIfNeeded",true);
-            CropIntent.putExtra("return-data",true);
+            CropIntent.putExtra("crop", "true");
+            CropIntent.putExtra("outputX", 500);
+            CropIntent.putExtra("outputY", 500);
+            CropIntent.putExtra("aspectX", 1);
+            CropIntent.putExtra("aspectY", 1);
+            CropIntent.putExtra("scaleUpIfNeeded", true);
+            CropIntent.putExtra("return-data", true);
 
             Log.i("Crop", uri.toString());
 
-            startActivityForResult(CropIntent,1);
-        }
-        catch (ActivityNotFoundException ex)
-        {
+            startActivityForResult(CropIntent, 1);
+        } catch (ActivityNotFoundException ex) {
 
         }
 

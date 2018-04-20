@@ -21,6 +21,7 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity2"
+<<<<<<< HEAD
             android:label="@string/title_activity_main2" />
         <activity android:name=".video_editor"
             android:screenOrientation="landscape"/>
@@ -29,6 +30,13 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".addpostActivity"
             android:screenOrientation="portrait"></activity>
+=======
+            android:label="@string/title_activity_main2"/>
+        <activity android:name=".video_editor"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".addpostActivity"></activity>
+
+>>>>>>> 1a4632300708c69ceaadc2b2fd33814f78987bb8
     </application>
 
 </manifest>

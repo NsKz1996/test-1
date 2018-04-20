@@ -32,24 +32,21 @@ public class Fragment_main_profile extends Fragment {
     }
 
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        
-
-
+        ButterKnife.bind(container);
 
 
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
-//        DataBase_User dataBase_user = new DataBase_User(getContext());
-//        dataBase_user.getData();
-//        ArrayList<Model_Data_User> model_data_users = new ArrayList<>(dataBase_user.getData());
-//        userName.setText(model_data_users.get());
-//        dataBase_user.getData();
+        DataBase_User dataBase_user = new DataBase_User(context);
+        ArrayList<Model_Data_User> model_data_users = new ArrayList<>(dataBase_user.getData());
+
+        dataBase_user.getData();
         return view;
 
     }

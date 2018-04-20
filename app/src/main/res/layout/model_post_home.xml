@@ -116,7 +116,7 @@
 
 
             <EditText
-                android:id="@+id/ModelHomeFragment_EditText_comment"
+                android:id="@+id/ModelHomeFragment_EditText_Comment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_toLeftOf="@id/ModelHomeFragment_TextView_commentNumber"

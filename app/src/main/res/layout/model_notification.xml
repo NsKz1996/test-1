@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="5"
     android:background="@drawable/shap_notification"
-    android:layout_marginBottom="2dp">
+    android:layout_marginBottom="1dp">
 
 
     <LinearLayout

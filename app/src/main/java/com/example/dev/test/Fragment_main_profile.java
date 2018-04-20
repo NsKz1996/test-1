@@ -13,7 +13,9 @@ import android.view.ViewGroup;
  */
 public class Fragment_main_profile extends Fragment {
 
-
+    public static Fragment_main_profile newInstance() {
+        return new Fragment_main_profile();
+    }
 
 
     @Override

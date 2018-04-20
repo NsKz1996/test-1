@@ -7,13 +7,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerViewAccessibilityDelegate;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
-import android.view.inputmethod.InputMethodManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,9 +27,10 @@ public class Fragment_main_home extends Fragment {
     }
 
 
-    private List<Model_Post_Home> model_post_homes = new ArrayList<>();
+    private ArrayList<Model_post_hom_hesam> model_post_homes ;
     private RecyclerView recyclerView;
     private RecyclerViewHomeAdapter mAdapter;
+    private DataBase_Add_Post add_post;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -40,27 +39,21 @@ public class Fragment_main_home extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         recyclerView = (RecyclerView) view.findViewById(R.id.Fragment_Main_Home_RecyclerView);
+        prepareMovieData();
+
+        add_post=new DataBase_Add_Post(getActivity());
+        model_post_homes=add_post.getData();
+
 
         runAnimation(recyclerView, 1);
-        prepareMovieData();
+
 
         return view;
     }
 
     private void prepareMovieData() {
 
-        Model_Post_Home model_post_home = new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "Khoob", "52");
-        model_post_homes.add(model_post_home);
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
-        model_post_homes.add(new Model_Post_Home(R.drawable.ghoozhism, "Ghoozh", "12:14", "10", "52"));
+
 
     }
 

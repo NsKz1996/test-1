@@ -38,14 +38,14 @@ public class DataBase_Add_Post {
         model_Post=new ArrayList<>();
 
         SQLiteDatabase db = helperaddpost.getWritableDatabase();
-        String[] columns = {myDbHelper.UID, myDbHelper.Discription, myDbHelper.Tozihat, myDbHelper.Photo};
+        String[] columns = {myDbHelper.UID, myDbHelper.Discription, myDbHelper.Photo};
         Cursor cursor =db.query(myDbHelper.TABLE_NAME,columns,null,null,null,null,null);
         while (cursor.moveToNext())
         {
 
             int cid =cursor.getInt(cursor.getColumnIndex(myDbHelper.UID));
             String Dis =cursor.getString(cursor.getColumnIndex(myDbHelper.Discription));
-            String Tozih = cursor.getString(cursor.getColumnIndex(myDbHelper.Tozihat));
+          //  String Tozih = cursor.getString(cursor.getColumnIndex(myDbHelper.Tozihat));
 
             byte[] photo = cursor.getBlob(cursor.getColumnIndex(myDbHelper.Photo));
 

@@ -3,15 +3,20 @@ package com.example.dev.test;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -23,10 +28,14 @@ public class addpostActivity extends AppCompatActivity {
      ImageView photo_;
     @BindView(R.id.fragmentaddpost_EditText_title)
     EditText Titel_;
+    @BindView(R.id.Activityaddpost_button_eshterakgozari)
+    Button Save;
 
 
 
     private Uri uri;
+    private Bitmap bitmap;
+    private DataBase_Add_Post db;
 
 
     @Override
@@ -34,6 +43,7 @@ public class addpostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_addpost);
         ButterKnife.bind(this);
+        db=new DataBase_Add_Post(this);
 
         photo_.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +60,34 @@ public class addpostActivity extends AppCompatActivity {
         });
 
 
+        Save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bitmap bitmap =((BitmapDrawable)photo_.getDrawable()).getBitmap();
+                ByteArrayOutputStream stream= new ByteArrayOutputStream();
+                bitmap.compress(Bitmap.CompressFormat.PNG,0,stream);
+                byte [] image = stream.toByteArray();
+               String t= Titel_.getText().toString();
+
+                Long ID=  db.insertData(new Model_post_hom_hesam(image,t));
+                if (ID<=0){
+                    Toast.makeText(getApplicationContext(), "Erore", Toast.LENGTH_SHORT).show();
+                }else {
+                    finish();
+                }
+
+
+            }
+        });
+
+
+
+    }
+
+    public void Bitmaptoarray(ImageView imageView){
+
+
+
     }
 
     @Override
@@ -64,7 +102,7 @@ public class addpostActivity extends AppCompatActivity {
         } else if (requestCode == 1) {
             if (data != null) {
                 Bundle bundle = data.getExtras();
-                Bitmap bitmap = bundle.getParcelable("data");
+                bitmap = bundle.getParcelable("data");
                 photo_.setImageBitmap(bitmap);
 
             }

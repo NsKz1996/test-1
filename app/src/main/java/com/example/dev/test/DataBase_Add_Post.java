@@ -86,7 +86,6 @@ public class DataBase_Add_Post {
         private static final String CREATE_TABLE = "CREATE TABLE "+TABLE_NAME+
                 " ("+UID+" INTEGER PRIMARY KEY AUTOINCREMENT, "+
                 Discription+" TEXT,"+
-                Tozihat+" TEXT,"+
                 Photo+" BLOB);";
 
         private static final String DROP_TABLE ="DROP TABLE IF EXISTS "+TABLE_NAME;

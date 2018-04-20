@@ -81,6 +81,7 @@ public class Register extends AppCompatActivity {
                     ByteArrayOutputStream stream= new ByteArrayOutputStream();
                     bitmap.compress(Bitmap.CompressFormat.PNG,0,stream);
                     byte [] image = stream.toByteArray();
+                    Log.i("Get Byte From Gallery",image.toString());
 
                     Long ID=  db.insertData(new Model_Data_User(phoneNumber.getText().toString(),
                             userName.getText().toString(),

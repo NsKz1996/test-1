@@ -30,6 +30,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        getintent();
+
+
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,4 +85,17 @@ public class Login extends AppCompatActivity {
 
 
     }
+
+
+    private void getintent(){
+        Intent Reg = getIntent();
+        Bundle User =Reg.getExtras();
+
+        if (User!=null){
+            userName.setText(User.getString("UserName"));
+            password.setText(User.getString("Password"));
+        }
+
+    }
+
 }

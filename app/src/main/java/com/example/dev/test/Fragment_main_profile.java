@@ -16,9 +16,7 @@ import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class Fragment_main_profile extends Fragment {
 
     @BindView(R.id.FragmentProfile_CircularImageView_Photo)
@@ -38,16 +36,22 @@ public class Fragment_main_profile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        ButterKnife.bind(getActivity());
+        
+
+
+
 
         // Inflate the layout for this fragment
+
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
+
 //        DataBase_User dataBase_user = new DataBase_User(getContext());
 //        dataBase_user.getData();
 //        ArrayList<Model_Data_User> model_data_users = new ArrayList<>(dataBase_user.getData());
 //        userName.setText(model_data_users.get());
 //        dataBase_user.getData();
         return view;
+
     }
 
 }

@@ -17,14 +17,18 @@
             </intent-filter>
         </activity>
         <activity android:name=".Register" />
-        <activity android:name=".forgotActivity" />
+        <activity android:name=".forgotActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MainActivity2"
             android:label="@string/title_activity_main2" />
-        <activity android:name=".video_editor" />
-        android:label="@string/title_activity_main2" />
+        <activity android:name=".video_editor"
+            android:screenOrientation="landscape"/>
+        android:label="@string/title_activity_main2"
+        android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity" />
-        <activity android:name=".addpostActivity"></activity>
+        <activity android:name=".addpostActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

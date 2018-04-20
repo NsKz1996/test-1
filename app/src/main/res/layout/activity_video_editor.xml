@@ -116,37 +116,77 @@
             <RelativeLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1.75"
-                android:orientation="horizontal">
+                android:layout_weight="1.75">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                <RelativeLayout
+                    android:layout_width="140dp"
+                    android:layout_height="140dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="15dp"
-                    android:src="@color/colorPrimaryDark"
-                    android:id="@+id/gerdali"
-                    />
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/Video_Editor_Reletive_Store"
+                    android:background="@drawable/shape_botton_editor">
+                    <Button
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/plus"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="3dp"
+                        android:id="@+id/Video_Editor_Botton_Layer"/>
+                    <Button
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/plus"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:id="@+id/Video_Editor_Botton_Media"/>
+                    <Button
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/plus"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="3dp"
+                        android:id="@+id/Video_Editor_Botton_Voice"/>
+                    <Button
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/plus"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="3dp"
+                        android:id="@+id/Video_Editor_Botton_Audio"/>
+                    <RelativeLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shape_botton2">
+                        <Button
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/user"
+                            android:id="@+id/Video_Editor_Botton_Camera"/>
+                    </RelativeLayout>
+                </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@drawable/shape_botton_editor"
-                    android:layout_below="@+id/gerdali"
-                    android:layout_margin="10dp">
+                    android:layout_below="@+id/Video_Editor_Reletive_Store"
+                    android:layout_margin="10dp"
+                    >
                     <Button
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:background="@drawable/exit"
                         android:layout_centerInParent="true"
-                        android:id="@+id/Video_Editor_Botton_Store"
                         />
                 </RelativeLayout>
                 <RelativeLayout
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:background="@drawable/shape_botton_editor"
-                    android:layout_below="@+id/gerdali"
+                    android:layout_below="@+id/Video_Editor_Reletive_Store"
                     android:layout_margin="10dp"
                     android:layout_alignParentRight="true">
                     <Button

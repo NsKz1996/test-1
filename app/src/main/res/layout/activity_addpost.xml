@@ -25,6 +25,13 @@
                 android:src="@drawable/plus"/>
         </RelativeLayout>
 
+        <Button
+            android:id="@+id/Activityaddpost_button_virayesh"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="ویرایش"
+            android:textColor="@color/ui"
+            android:layout_margin="2dp"/>
 
 
         <EditText
@@ -32,9 +39,8 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:layout_below="@+id/fragmentaddpost_button_addpost"
-            android:layout_margin="10dp"
-            android:background="@drawable/shap_addpost"
-            android:backgroundTint="@color/ui"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_shishe"
             android:gravity="center_vertical"
             android:hint="عنوان"
             android:paddingRight="10dp"
@@ -43,14 +49,13 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="85dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/shap_addpost"
+            android:layout_margin="2dp"
+            android:background="@drawable/shape_shishe"
             android:hint="توضیحات"
             android:gravity="right"
             android:paddingRight="10dp"
             android:paddingTop="10dp"
             android:textColorHint="#fff"
-            android:backgroundTint="@color/ui"
             android:layout_below="@+id/fragmentaddpost_EditText_title" />
 
     </LinearLayout>

@@ -5,6 +5,10 @@
     android:layout_height="match_parent"
     android:background="@color/ui">
 
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/shape_shishe"></android.support.v7.widget.SearchView>
 
 
     </FrameLayout>

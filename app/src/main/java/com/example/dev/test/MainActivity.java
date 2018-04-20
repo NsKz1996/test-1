@@ -18,10 +18,6 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.framelayout,new Fragment_main_home()).commit();
 
-
-
-
-
     }
 
 

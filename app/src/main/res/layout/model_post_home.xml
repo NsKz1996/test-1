@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="5dp">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="360dp"
         android:orientation="vertical">
 
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:background="@color/ui">
+
             <ImageView
                 android:id="@+id/ModelHomeFragment_imageView_photouser"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/profile"/>
+                android:background="@drawable/profile" />
+
             <TextView
                 android:id="@+id/ModelHomeFragment_textView_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/ModelHomeFragment_imageView_photouser"
                 android:layout_centerVertical="true"
-                android:text="aria nazaralizadeh"
                 android:layout_marginLeft="10dp"
-                android:textColor="#fff"/>
+                android:layout_toRightOf="@id/ModelHomeFragment_imageView_photouser"
+                android:text="aria nazaralizadeh"
+                android:textColor="#fff" />
 
             <TextView
                 android:id="@+id/ModelHomeFragment_textView_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="10dp"
                 android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
                 android:text="13:12"
-                android:textColor="#fff"/>
+                android:textColor="#fff" />
         </RelativeLayout>
 
 
@@ -52,51 +53,51 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@color/ui">
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="10dp"
-                android:layout_centerVertical="true"
-                android:background="@drawable/heart_imagebackground"
-                />
 
             <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/heart_imagebackground" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
                 android:layout_marginLeft="50dp"
-                android:background="@drawable/comment_imagebackground"
-                android:layout_gravity="center"/>
+                android:background="@drawable/comment_imagebackground" />
 
             <TextView
                 android:id="@+id/ModelHomeFragment_textView_likeNumber"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:layout_alignParentRight="true"
                 android:layout_gravity="center"
                 android:layout_marginLeft="2dp"
-                android:layout_alignParentRight="true"
-                android:text="12"
                 android:layout_marginRight="20dp"
                 android:gravity="center"
-                android:textColor="#fff"/>
+                android:text="12"
+                android:textColor="#fff" />
 
             <TextView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_gravity="center"
-                android:text="like"
-                android:gravity="center"
                 android:layout_alignParentRight="true"
-                android:textColor="#fff"/>
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="like"
+                android:textColor="#fff" />
         </RelativeLayout>
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/ui"
             android:layout_marginTop="1dp"
+            android:background="@color/ui"
             android:gravity="right">
 
 
@@ -104,11 +105,12 @@
                 android:id="@+id/ModelHomeFragment_EditText_comment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="comment...."
                 android:layout_toLeftOf="@id/ModelHomeFragment_TextView_commentNumber"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:hint="comment...."
                 android:textColor="#fff"
-                android:textColorHint="#fff"
-                android:backgroundTint="@color/colorPrimaryDark"/>
+                android:textColorHint="#fff" />
+
             <TextView
                 android:id="@+id/ModelHomeFragment_TextView_commentNumber"
                 android:layout_width="30dp"
@@ -116,8 +118,8 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:gravity="center"
-                android:textColor="#fff"
-                android:text="23"/>
+                android:text="23"
+                android:textColor="#fff" />
 
         </RelativeLayout>
 

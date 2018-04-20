@@ -11,5 +11,7 @@ public class addpostActivity extends AppCompatActivity {
         setContentView(R.layout.activity_addpost);
 
 
+
+
     }
 }

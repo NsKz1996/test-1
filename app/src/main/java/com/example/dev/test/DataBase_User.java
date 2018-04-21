@@ -38,7 +38,7 @@ public class DataBase_User {
 
     public ArrayList<Model_Data_User> getData()
     {
-        ArrayList<Model_Data_User> model_data_users =null ;
+        ArrayList<Model_Data_User> model_data_users =new ArrayList<>() ;
 
         SQLiteDatabase db = myhelper.getWritableDatabase();
         String[] columns = {myDbHelper.UID,myDbHelper.PhoneNumber ,myDbHelper.Username, myDbHelper.PassWord, myDbHelper.Photo};
@@ -52,7 +52,10 @@ public class DataBase_User {
             byte[] photo = cursor.getBlob(cursor.getColumnIndex(myDbHelper.Photo));
             Log.i("Byte savve sql",photo+"");
 
-            model_data_users.add(new Model_Data_User(phoneNumber, userName, password, photo));
+
+
+                model_data_users.add(new Model_Data_User(phoneNumber, userName, password, photo));
+            
         }
         return model_data_users;
     }
@@ -80,7 +83,7 @@ public class DataBase_User {
     {
         private static final String DATABASE_NAME = "DataBaseGhoozh";    // Database Name
         private static final String TABLE_NAME = "User";   // Table Name
-        private static final int DATABASE_Version = 1;    // Database Version
+        private static final int DATABASE_Version = 2;    // Database Version
         private static final String UID="_id";     // Column I (Primary Key)
         private static final String PhoneNumber = "PhoneNumber";    //Column II
         private static final String Username= "UserName";    // Column III

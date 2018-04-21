@@ -53,7 +53,7 @@ public class Fragment_main_profile extends Fragment {
 
         DataBase_User dataBase_user = new DataBase_User(getActivity());
 
-        ArrayList<Model_Data_User> Data_User = null;
+        ArrayList<Model_Data_User> Data_User ;
         Data_User = dataBase_user.getData();
 
         if (Data_User == null) {

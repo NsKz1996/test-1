@@ -75,9 +75,9 @@ public class DataBase_Add_Post {
 
     static class myDbHelper extends SQLiteOpenHelper
     {
-        private static final String DATABASE_NAME = "DataBaseGhoozh";    // Database Name
+        private static final String DATABASE_NAME = "DataBaseGhoozh_Addpost";    // Database Name
         private static final String TABLE_NAME = "Post";   // Table Name
-        private static final int DATABASE_Version = 1;    // Database Version
+        private static final int DATABASE_Version = 2;    // Database Version
         private static final String UID="_id";     // Column I (Primary Key)
         private static final String Discription = "Discription";    //Column II
         private static final String Tozihat= "Tozihat";    // Column III

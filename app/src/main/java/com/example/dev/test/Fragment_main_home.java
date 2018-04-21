@@ -43,11 +43,10 @@ public class Fragment_main_home extends Fragment {
 
         add_post=new DataBase_Add_Post(getActivity());
         model_post_homes=null;
-        model_post_homes=add_post.getData();
 
-if (model_post_homes==null){
 
-}else {
+if (add_post.getData()!=null){
+    model_post_homes=add_post.getData();
     runAnimation(recyclerView, 1);
 }
 

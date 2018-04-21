@@ -42,10 +42,15 @@ public class Fragment_main_home extends Fragment {
         prepareMovieData();
 
         add_post=new DataBase_Add_Post(getActivity());
+        model_post_homes=null;
         model_post_homes=add_post.getData();
 
+if (model_post_homes==null){
 
-        runAnimation(recyclerView, 1);
+}else {
+    runAnimation(recyclerView, 1);
+}
+
 
 
         return view;

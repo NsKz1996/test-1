@@ -38,10 +38,10 @@ public class DataBase_User {
 
     public ArrayList<Model_Data_User> getData()
     {
-        ArrayList<Model_Data_User> model_data_users =new ArrayList<>() ;
+        ArrayList<Model_Data_User> model_data_users =null ;
 
         SQLiteDatabase db = myhelper.getWritableDatabase();
-        String[] columns = {myDbHelper.UID,myDbHelper.Username ,myDbHelper.PhoneNumber, myDbHelper.PassWord, myDbHelper.Photo};
+        String[] columns = {myDbHelper.UID,myDbHelper.PhoneNumber ,myDbHelper.Username, myDbHelper.PassWord, myDbHelper.Photo};
         Cursor cursor =db.query(myDbHelper.TABLE_NAME,columns,null,null,null,null,null);
         while (cursor.moveToNext())
         {

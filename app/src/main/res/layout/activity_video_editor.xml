@@ -29,12 +29,12 @@
                 android:background="@color/colorPrimaryDark">
 
                 <Button
+                    android:id="@+id/Video_Editor_Botton_Back"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/left"
-                    android:id="@+id/Video_Editor_Botton_Back"/>
+                    android:background="@drawable/left" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -47,31 +47,12 @@
                 android:background="@color/colorPrimaryDark">
 
                 <Button
+                    android:id="@+id/Video_Editor_Botton_Forward"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/right"
-                    android:id="@+id/Video_Editor_Botton_Forward"/>
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="45dp"
-                android:layout_height="0dp"
-                android:layout_alignParentLeft="true"
-                android:layout_marginLeft="2dp"
-                android:layout_marginTop="2dp"
-                android:layout_weight="1"
-                android:background="@color/colorPrimaryDark">
-
-                <Button
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:background="@drawable/share"
-                    android:id="@+id/Video_Editor_Botton_Share"/>
+                    android:background="@drawable/right" />
 
             </RelativeLayout>
 
@@ -85,12 +66,31 @@
                 android:background="@color/colorPrimaryDark">
 
                 <Button
+                    android:id="@+id/Video_Editor_Botton_Share"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/gear"
-                    android:id="@+id/Video_Editor_Botton_Setting"/>
+                    android:background="@drawable/share" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="45dp"
+                android:layout_height="0dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_weight="1"
+                android:background="@color/colorPrimaryDark">
+
+                <Button
+                    android:id="@+id/Video_Editor_Botton_Setting"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/gear" />
 
             </RelativeLayout>
         </LinearLayout>
@@ -119,82 +119,90 @@
                 android:layout_weight="1.75">
 
                 <RelativeLayout
+                    android:id="@+id/Video_Editor_Reletive_Store"
                     android:layout_width="140dp"
                     android:layout_height="140dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="10dp"
-                    android:id="@+id/Video_Editor_Reletive_Store"
                     android:background="@drawable/shape_botton_editor">
+
                     <Button
+                        android:id="@+id/Video_Editor_Botton_Layer"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/plus"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="3dp"
-                        android:id="@+id/Video_Editor_Botton_Layer"/>
+                        android:background="@drawable/plus" />
+
                     <Button
+                        android:id="@+id/Video_Editor_Botton_Media"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/plus"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="3dp"
-                        android:id="@+id/Video_Editor_Botton_Media"/>
+                        android:background="@drawable/plus" />
+
                     <Button
+                        android:id="@+id/Video_Editor_Botton_Voice"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/plus"
-                        android:layout_centerHorizontal="true"
                         android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
                         android:layout_marginBottom="3dp"
-                        android:id="@+id/Video_Editor_Botton_Voice"/>
+                        android:background="@drawable/plus" />
+
                     <Button
+                        android:id="@+id/Video_Editor_Botton_Audio"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/plus"
-                        android:layout_centerVertical="true"
                         android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginRight="3dp"
-                        android:id="@+id/Video_Editor_Botton_Audio"/>
+                        android:background="@drawable/plus" />
+
                     <RelativeLayout
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:layout_centerInParent="true"
                         android:background="@drawable/shape_botton2">
+
                         <Button
+                            android:id="@+id/Video_Editor_Botton_Camera"
                             android:layout_width="30dp"
                             android:layout_height="30dp"
                             android:layout_centerInParent="true"
-                            android:background="@drawable/user"
-                            android:id="@+id/Video_Editor_Botton_Camera"/>
+                            android:background="@drawable/user" />
                     </RelativeLayout>
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/shape_botton_editor"
                     android:layout_below="@+id/Video_Editor_Reletive_Store"
                     android:layout_margin="10dp"
-                    >
+                    android:background="@drawable/shape_botton_editor">
+
                     <Button
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/exit"
                         android:layout_centerInParent="true"
-                        />
+                        android:background="@drawable/exit" />
                 </RelativeLayout>
+
                 <RelativeLayout
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/shape_botton_editor"
+                    android:layout_alignParentRight="true"
                     android:layout_below="@+id/Video_Editor_Reletive_Store"
                     android:layout_margin="10dp"
-                    android:layout_alignParentRight="true">
+                    android:background="@drawable/shape_botton_editor">
+
                     <Button
+                        android:id="@+id/Video_Editor_Botton_Play"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
-                        android:background="@drawable/user"
                         android:layout_centerInParent="true"
-                        android:id="@+id/Video_Editor_Botton_Play"/>
+                        android:background="@drawable/user" />
                 </RelativeLayout>
 
             </RelativeLayout>
@@ -222,12 +230,12 @@
                 android:background="@color/colorPrimaryDark">
 
                 <Button
+                    android:id="@+id/Video_Editor_Botton_Resize"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/resize"
-                    android:id="@+id/Video_Editor_Botton_Resize"/>
+                    android:background="@drawable/resize" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -240,12 +248,12 @@
                 android:background="@color/colorPrimaryDark">
 
                 <Button
+                    android:id="@+id/Video_Editor_Botton_Next"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/forward"
-                    android:id="@+id/Video_Editor_Botton_Next"/>
+                    android:background="@drawable/forward" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -258,12 +266,12 @@
                 android:background="@color/colorPrimaryDark">
 
                 <Button
+                    android:id="@+id/Video_Editor_Botton_Exit"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:background="@drawable/exit"
-                    android:id="@+id/Video_Editor_Botton_Exit"/>
+                    android:background="@drawable/exit" />
             </RelativeLayout>
         </LinearLayout>
 
@@ -296,6 +304,7 @@
                 android:layout_weight="1.99"
                 android:background="@color/colorPrimaryDark"
                 android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="70dp"

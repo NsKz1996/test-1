@@ -15,10 +15,10 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:gravity="center"
             android:layout_marginTop="100dp"
-            android:textColor="#fff"
-            android:text="@string/forgotpassword"/>
+            android:gravity="center"
+            android:text="@string/forgotpassword"
+            android:textColor="#fff" />
 
 
         <RelativeLayout
@@ -37,15 +37,14 @@
                 android:background="@drawable/img_phone" />
 
 
-
             <EditText
+                android:id="@+id/Login_EditText_UserName"
                 android:layout_width="280dp"
                 android:layout_height="40dp"
                 android:layout_toRightOf="@id/imguser"
                 android:backgroundTint="#FFF"
                 android:hint="شماره تلفن"
                 android:inputType="text"
-                android:id="@+id/Login_EditText_UserName"
                 android:textColor="#fff"
                 android:textColorHint="#d3d2d2"
                 android:textSize="17dp"
@@ -56,15 +55,14 @@
             android:id="@+id/activityfofgot_button_ersal"
             android:layout_width="300dp"
             android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
             android:layout_below="@id/tag1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
             android:background="@drawable/shape_botton"
             android:text="ارسال کد"
-            android:layout_marginTop="5dp"
             android:textColor="#fff">
 
         </Button>
-
 
 
     </RelativeLayout>

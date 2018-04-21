@@ -46,18 +46,10 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(Login.this, Register.class);
-                startActivity(intent);
-
+                GoOther();
 
             }
         });
-
-
-
-
-
-
 
 
         forgetPassword.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +76,12 @@ public class Login extends AppCompatActivity {
             password.setText(User.getString("Password"));
         }
 
+    }
+
+    public void GoOther() {
+        Intent intent = new Intent(getApplicationContext(), Register.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.go_down, R.anim.go_up);
     }
 
 }

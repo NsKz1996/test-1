@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class Fragment_main_notificatiin extends Fragment {
 
-    public static Fragment_main_notificatiin newInstance(){
+    public static Fragment_main_notificatiin newInstance() {
         return new Fragment_main_notificatiin();
     }
 
@@ -51,20 +51,21 @@ public class Fragment_main_notificatiin extends Fragment {
 
     private void prepareMovieData() {
 
-        Model_Notification model_notification = new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" );
+        Model_Notification model_notification = new Model_Notification(R.drawable.ghoozhism, "25", "10", "100");
         model_notificationList.add(model_notification);
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
-        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100" ));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
+        model_notificationList.add(new Model_Notification(R.drawable.ghoozhism, "25", "10", "100"));
     }
+
     private void runAnimation(RecyclerView recyclerView, int type) {
         Context context = recyclerView.getContext();
         LayoutAnimationController controller = null;
@@ -73,7 +74,7 @@ public class Fragment_main_notificatiin extends Fragment {
             controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_fall_down);
         } else if (type == 1) {
             controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_slide_from_button);
-        } else if (type == 2 ){
+        } else if (type == 2) {
             controller = AnimationUtils.loadLayoutAnimation(context, R.anim.layout_slide_from_right);
         }
         RecyclerViewNotificationAdapter adapter = new RecyclerViewNotificationAdapter(model_notificationList);

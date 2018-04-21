@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/ui"
     android:orientation="vertical">
@@ -13,54 +13,55 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp">
+
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fragmentaddpost_Imageview_addpost"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:id="@+id/fragmentaddpost_Imageview_addpost"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:padding="5dp"
                 android:background="@drawable/shap_addpost"
-                android:src="@drawable/plus"/>
+                android:padding="5dp"
+                android:src="@drawable/plus" />
         </RelativeLayout>
 
 
+        <EditText
+            android:id="@+id/fragmentaddpost_EditText_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@+id/fragmentaddpost_button_addpost"
+            android:layout_margin="10dp"
+            android:background="@drawable/shap_addpost"
+            android:backgroundTint="@color/ui"
+            android:gravity="center_vertical"
+            android:hint="عنوان"
+            android:paddingRight="10dp"
+            android:textColorHint="#fff" />
 
-    <EditText
-        android:id="@+id/fragmentaddpost_EditText_title"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_below="@+id/fragmentaddpost_button_addpost"
-        android:layout_margin="10dp"
-        android:background="@drawable/shap_addpost"
-        android:backgroundTint="@color/ui"
-        android:gravity="center_vertical"
-        android:hint="عنوان"
-        android:paddingRight="10dp"
-        android:textColorHint="#fff" />
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="85dp"
-        android:layout_margin="10dp"
-        android:background="@drawable/shap_addpost"
-        android:hint="توضیحات"
-        android:gravity="right"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:textColorHint="#fff"
-        android:backgroundTint="@color/ui"
-        android:layout_below="@+id/fragmentaddpost_EditText_title" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_below="@+id/fragmentaddpost_EditText_title"
+            android:layout_margin="10dp"
+            android:background="@drawable/shap_addpost"
+            android:backgroundTint="@color/ui"
+            android:gravity="right"
+            android:hint="توضیحات"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:textColorHint="#fff" />
 
     </LinearLayout>
+
     <Button
         android:id="@+id/Activityaddpost_button_eshterakgozari"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#fff"
         android:layout_alignParentBottom="true"
         android:layout_margin="5dp"
+        android:background="#fff"
         android:text="اشتراک گذاری"
-        android:textColor="@color/ui"/>
+        android:textColor="@color/ui" />
 </RelativeLayout>

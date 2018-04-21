@@ -2,12 +2,12 @@ package com.example.dev.test;
 
 public class Model_Data_User {
 
-  //  int ID;
-    String PhoneNumber,UserName,Password;
-    byte [] Profile;
+    //  int ID;
+    String PhoneNumber, UserName, Password;
+    byte[] Profile;
 
-    public Model_Data_User( String phoneNumber, String userName, String password, byte[] profile) {
-      //  ID=id;
+    public Model_Data_User(String phoneNumber, String userName, String password, byte[] profile) {
+        //  ID=id;
         PhoneNumber = phoneNumber;
         UserName = userName;
         Password = password;

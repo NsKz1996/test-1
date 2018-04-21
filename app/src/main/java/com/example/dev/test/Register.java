@@ -204,10 +204,18 @@ public class Register extends AppCompatActivity {
 
     }
 
+    /*
+            @Override
+        public void onBackPressed() {
+            finish();
+            super.onBackPressed();
+        }
+        */
     @Override
     public void onBackPressed() {
-        finish();
         super.onBackPressed();
+        overridePendingTransition(R.anim.go_up, R.anim.go_down);
+        finish();
     }
 }
 

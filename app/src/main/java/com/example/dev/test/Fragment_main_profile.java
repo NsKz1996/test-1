@@ -16,7 +16,6 @@ import butterknife.ButterKnife;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 
-
 public class Fragment_main_profile extends Fragment {
 
     @BindView(R.id.FragmentProfile_CircularImageView_Photo)
@@ -30,7 +29,6 @@ public class Fragment_main_profile extends Fragment {
 
         return new Fragment_main_profile();
     }
-
 
 
     @Override

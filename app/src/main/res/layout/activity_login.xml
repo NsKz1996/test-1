@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.androd.com/tools"
     android:layout_width="match_parent"
@@ -47,13 +46,13 @@
                     android:background="@drawable/male" />
 
                 <EditText
+                    android:id="@+id/Login_EditText_UserName"
                     android:layout_width="280dp"
                     android:layout_height="40dp"
                     android:layout_toRightOf="@id/imguser"
                     android:backgroundTint="#FFF"
                     android:hint="نام کاربری"
                     android:inputType="text"
-                    android:id="@+id/Login_EditText_UserName"
                     android:textColor="#fff"
                     android:textColorHint="#d3d2d2"
                     android:textSize="17dp"
@@ -76,12 +75,12 @@
                     android:background="@drawable/hide" />
 
                 <EditText
+                    android:id="@+id/Login_EditText_Password"
                     android:layout_width="280dp"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/login_botton_hide_password"
                     android:backgroundTint="#fff"
                     android:gravity="right"
-                    android:id="@+id/Login_EditText_Password"
                     android:hint="رمزعبور"
                     android:inputType="textPassword"
                     android:textColor="#fff"
@@ -99,12 +98,12 @@
 
 
             <Button
+                android:id="@+id/Login_Button_SignIn"
                 android:layout_width="80dp"
                 android:layout_height="40dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="100dp"
-                android:id="@+id/Login_Button_SignIn"
                 android:background="@drawable/shap_background"
                 android:text="ورود"
                 android:textColor="#029688"
@@ -125,13 +124,13 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/Login_TextView_Forget"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="20dp"
                 android:background="#029688"
-                android:id="@+id/Login_TextView_Forget"
                 android:text="رمز عبور خود را فراموش کرده ام"
                 android:textColor="#fff"
                 android:textSize="15dp"

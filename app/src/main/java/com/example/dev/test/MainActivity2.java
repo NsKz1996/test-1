@@ -31,16 +31,16 @@ public class MainActivity2 extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    transaction.replace(R.id.view_fragment,new Fragment_main_home()).commit();
+                    transaction.replace(R.id.view_fragment, new Fragment_main_home()).commit();
                     return true;
                 case R.id.navigation_search:
-                    transaction.replace(R.id.view_fragment,new Fragment_main_search()).commit();
+                    transaction.replace(R.id.view_fragment, new Fragment_main_search()).commit();
                     return true;
                 case R.id.navigation_notifications:
-                    transaction.replace(R.id.view_fragment,new Fragment_main_notificatiin()).commit();
+                    transaction.replace(R.id.view_fragment, new Fragment_main_notificatiin()).commit();
                     return true;
                 case R.id.navigation_profile:
-                    transaction.replace(R.id.view_fragment,new Fragment_main_profile()).commit();
+                    transaction.replace(R.id.view_fragment, new Fragment_main_profile()).commit();
                     return true;
             }
             return false;
@@ -52,7 +52,7 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        MainActivity_Button_addpost= (ImageButton)findViewById(R.id.mainActivity_button_addpost);
+        MainActivity_Button_addpost = (ImageButton) findViewById(R.id.mainActivity_button_addpost);
 
         MainActivity_Button_addpost.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,7 +67,7 @@ public class MainActivity2 extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.replace(R.id.view_fragment,new Fragment_main_home()).commit();
+        transaction.replace(R.id.view_fragment, new Fragment_main_home()).commit();
     }
 
 }

@@ -1,9 +1,9 @@
 package com.example.dev.test;
 
-        import android.support.annotation.Nullable;
-        import android.support.v4.app.Fragment;
-        import android.support.v4.app.FragmentManager;
-        import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 
 /**
  * Created by Amir Hossein on 4/20/2018.
